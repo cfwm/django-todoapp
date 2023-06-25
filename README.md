@@ -11,8 +11,8 @@ python3 -m venv env
 source env/bin/activate
 
 # django db admin
-http://127.0.0.1:8000/admin/login/?next=/admin/
-http://127.0.0.1:8000/admin/
+http://localhost:8000/admin/login/?next=/admin/
+http://localhost:8000/admin/
 # run
 python3 manage.py runserver 8000
 
