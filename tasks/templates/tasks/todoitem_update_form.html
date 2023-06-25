@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>TODO LIST</title>
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<ul>
+				<li>Header</li>
+			</ul>
+		</nav>
+	</header>
+	
+	<section>
+
+    <div>
+      <span>Python content UPDATE starts</span>
+    </div>
+    <div>
+			{% block content %}
+			<h2>Edit To Do Item</h2>
+			<form method="post">
+			<div>
+				{% csrf_token %} {{ form.as_p }}
+				<input type="submit" value="Submit" />
+			</div>
+			</form>
+			{% endblock %}
+    </div>
+    <div>Python content ends</div>
+		
+	</section>
+
+	<footer>
+		<p style="border: solid cyan 10px;">Footer</p>
+	</footer>
+
+</body>
+
+</html>
