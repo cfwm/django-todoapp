@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>TODO LIST</title>
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<ul>
+				<li>Header</li>
+			</ul>
+		</nav>
+	</header>
+	
+	<section>
+
+    <div style="border: solid red 10px; justify-content: center;">
+      <span style="border: solid seagreen 5px">Python content starts</span>
+    </div>
+      {% block content-py%}
+        {% for task in object_list %}
+          <article>
+            <header>
+              <h2>{{ task.title}}</h2>
+              <p>created at <time datetime="2009-09-04T16:31:24+02:00">XX/XX/XXXX</time></p>
+              <p>{{task.due_date}}</p>
+              <p>{{task.body}}</p>
+              <p>{{task.category}}</p>
+            </header>
+            <p>Description</p>
+          </article>
+        {% endfor %}
+      {% endblock %}
+
+    <div>Python content ends</div>
+	
+		<!-- <article>
+			<header>
+				<h2>task one</h2>
+				<p>created at <time datetime="2009-09-04T16:31:24+02:00">XX/XX/XXXX</time></p>
+			</header>
+			<p>Description</p>
+		</article>
+
+    <article>
+			<header>
+				<h2>task two</h2>
+				<p>created at <time datetime="2009-09-04T16:37:24+02:00">XX/XX/XXXX</time></p>
+			</header>
+			<p>Description</p>
+		</article> -->
+
+		
+	</section>
+	<footer>
+		<p>Footer</p>
+	</footer>
+
+</body>
+
+</html>
